@@ -1,0 +1,62 @@
+The "Banking Management System" project is a C programming language-based system that simulates various banking functionalities. 
+Its purpose is to teach concepts such as socket programming, process management, file management, record locking, system calls, 
+shared memory, and signals in a Linux environment. Here's a summary of the project:
+
+Project Overview:
+
+This project involves creating a simulated online banking system with a server-client architecture.
+It includes functionalities for creating and managing different types of accounts (Normal, Joint, and Admin) and an admin interface.
+Key project files include add_admin.c, count_initial.c, tserver.c, tclient.c, and viewAdmin.c.
+How to Run the Project:
+
+Run count_initial.c to initialize the Account Number (e.g., starting from 1000).
+Compile and run tserver.c to start the server, which waits for client connections.
+Compile and run tclient.c to connect client users to the server.
+To add an Admin user, compile and run addAdmin.c.
+Functionalities Provided:
+
+The system simulates a basic online banking system with functionalities like:
+
+Creating new accounts (Normal, Joint, Admin)
+Depositing and withdrawing money from accounts
+Viewing account details
+Changing account passwords
+Transferring money between accounts
+Admin accounts with add/delete/view permissions for any account.
+Three types of accounts are supported:
+
+Normal account (Single User)
+Joint account (Two users sharing the same account number)
+Admin account (Root user with special permissions)
+Normal Account (Single User):
+
+Users can create accounts, log in using credentials, and perform operations.
+Account creation requires providing a username, password, balance, and an automatically assigned account number.
+After login, users can:
+View account details
+Deposit money
+Withdraw money (within valid limits)
+Change their account password
+View account balance
+Transfer money to other accounts
+Exit to the login page.
+Joint Account (Two Users with the Same Account Number):
+
+Users can create joint accounts, log in, and perform operations.
+Creating a joint account involves providing two usernames, a password, balance, and an account number.
+After login, users can:
+Simultaneously view account details
+Deposit money (with locking to prevent conflicts)
+Withdraw money (with locking)
+Change their account password
+Exit to the login page.
+Admin Account (Root User):
+
+Admin accounts are created using addAdmin.c.
+Admin users have special permissions to:
+View any account's details using its account number
+Delete normal and joint accounts, erasing their details
+Create new accounts (with the ability to allocate account numbers from 1 to 999)
+Exit the admin interface.
+In summary, this project provides a comprehensive banking management system with various account types, user interactions,
+and an admin interface, all implemented in C with an emphasis on Linux concepts and socket programming.
